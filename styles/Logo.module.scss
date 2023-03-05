@@ -1,0 +1,33 @@
+@use "variables" as var;
+
+.LogoLink {
+  display: flex;
+  align-items: center;
+
+  .logoContainer {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+
+  .nameContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .logoFirstLine,
+    .logoSecondLine {
+      font-weight: 600;
+      line-height: 15px;
+    }
+
+    .logoFirstLine {
+      font-size: 20px;
+    }
+
+    .logoSecondLine {
+      font-size: 15px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use "variables" as var;
+
+.block {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: var.$c100-hex;
+  border-radius: var.$border-radius;
+  border-left: 10px solid var.$c400-hex;
+
+  .blockQuestion {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .blockAnsware {
+    font-size: 16px;
+    color: var.$c500-hex;
+  }
+}

@@ -1,0 +1,86 @@
+@use "variables" as var;
+
+.expansionLimit {
+  max-width: var.$max-width;
+  margin: 0 auto;
+  padding: 25px;
+
+  .rfaBanner {
+    width: 100%;
+    height: 200px;
+    padding: 30px;
+    color: var.$c200-hex;
+    background: linear-gradient(90deg, #041e49 0%, rgba(4, 30, 73, 0) 100%),
+      url("../assets/images/rfimage.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: var.$border-radius;
+
+    .rfaTitle {
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+    .rfaDescription {
+      max-width: 50%;
+      font-size: 13px;
+      font-weight: 400;
+    }
+  }
+
+  .ticketsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    grid-auto-rows: 50px;
+    gap: 5px;
+    margin-top: 50px;
+
+    .ticket {
+      display: grid;
+      place-content: center;
+      color: var.$c400-hex;
+      background-color: var.$c100-hex;
+      border-radius: var.$border-radius;
+    }
+
+    .selectedTicket {
+      color: var.$c200-hex;
+      background-color: var.$c400-hex;
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  .expansionLimit {
+    .rfaBanner {
+      height: 300px;
+      padding: 40px;
+
+      .rfaTitle {
+        font-size: 40px;
+      }
+
+      .rfaDescription {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .expansionLimit {
+    .rfaBanner {
+      height: 400px;
+      padding: 60px;
+
+      .rfaTitle {
+        font-size: 70px;
+      }
+
+      .rfaDescription {
+        font-size: 30px;
+      }
+    }
+  }
+}

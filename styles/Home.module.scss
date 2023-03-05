@@ -1,0 +1,80 @@
+@use "variables" as var;
+
+.rfaBanner {
+  width: 100%;
+  height: calc(100vh - 60px);
+  background: linear-gradient(0deg, rgb(4, 30, 73) 0%, rgba(4, 30, 73, 0) 100%),
+    url("../assets/images/rfimage.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .expansionLimit {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    max-width: var.$max-width;
+    height: 100%;
+    margin: 0 auto;
+    padding: 100px 25px 120px 25px;
+
+    .rfaBannerTitle {
+      margin-bottom: 20px;
+      color: var.$c100-hex;
+      font-size: 50px;
+      line-height: 50px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .rfaBannerDescription {
+      max-width: 500px;
+      margin: 0 auto;
+      color: var.$c100-hex;
+      font-size: 20px;
+      font-weight: 400;
+      text-align: center;
+    }
+
+    .rfaBannerActionButton {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      .actionButton {
+        display: flex;
+        align-items: center;
+        padding: 15px 30px;
+        font-size: 18px;
+        font-weight: 500;
+        background-color: var.$c500-hex;
+        border-radius: var.$border-radius;
+
+        img {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  .rfaBanner {
+    .expansionLimit {
+      .rfaBannerTitle {
+        font-size: 50px;
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .rfaBanner {
+    .expansionLimit {
+      .rfaBannerTitle,
+      .rfaBannerDescription {
+        text-align: start;
+      }
+    }
+  }
+}

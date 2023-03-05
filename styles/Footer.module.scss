@@ -1,0 +1,78 @@
+@use "variables" as var;
+
+.footer {
+  display: flex;
+  align-items: center;
+  height: 300px;
+  background-color: var.$c400-hex;
+  color: var.$c200-hex;
+
+  .expansionLimit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    max-width: var.$max-width;
+
+    .socialNetworks {
+      display: flex;
+      flex-direction: row;
+      gap: 50px;
+
+      .socialNetworksLink {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-size: 14px;
+        font-weight: 500;
+        color: var.$c200-hex;
+
+        .socialNetworksName {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  .footer {
+    .expansionLimit {
+      .socialNetworks {
+        gap: 30px;
+
+        .socialNetworksLink {
+          .socialNetworksName {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .footer {
+    .expansionLimit {
+      padding: 0 50px;
+      flex-direction: row;
+
+      .socialNetworks {
+        flex-direction: column;
+        gap: 30px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1425px) {
+  .footer {
+    .expansionLimit {
+      padding: 0 25px;
+    }
+  }
+}

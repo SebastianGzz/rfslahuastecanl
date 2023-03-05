@@ -1,0 +1,48 @@
+@use "variables" as var;
+
+.debitCard {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 370px;
+  height: 195px;
+  padding: 30px;
+  color: var.$c200-hex;
+  border-radius: 15px;
+
+  .debitCardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .debitCardBank {
+      display: flex;
+      align-items: center;
+
+      .debitCardBankName {
+        margin-left: 10px;
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+
+    div button {
+      background: none;
+    }
+  }
+
+  .debitCardInfo {
+    display: flex;
+    flex-direction: column;
+
+    .debitCardNumber {
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .debitCardHolder {
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+}
